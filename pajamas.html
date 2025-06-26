@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пижамы | Пещера Алладина</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/pajamas.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Шапка (копируем из index.html) -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-home logo-icon"></i>
+                    Пещера Алладина
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="#">Халаты</a></li>
+                        <li><a href="pajamas.html">Пижамы</a></li>
+                        <li><a href="textiles.html">Текстиль</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="sales.html">Акции</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <i class="fas fa-search"></i>
+                    <i class="fas fa-user user-icon"></i>
+                    <i class="fas fa-shopping-cart cart-icon"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основное содержимое страницы -->
+    <main class="container">
+        <h1 class="section-title">Пижамы</h1>
+        
+        <div class="breadcrumbs">
+            <a href="index.html">Главная</a> / <span>Пижамы</span>
+        </div>
+
+        <div class="category-description">
+            <p>Уютные пижамы из натуральных материалов для всей семьи. Выбирайте из нашей коллекции женских, мужских и детских моделей.</p>
+        </div>
+
+        <div class="pajamas-filters">
+            <div class="filter-group">
+                <label>Категория:</label>
+                <select>
+                    <option value="all">Все пижамы</option>
+                    <option value="women">Женские</option>
+                    <option value="men">Мужские</option>
+                    <option value="kids">Детские</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Материал:</label>
+                <select>
+                    <option value="all">Все материалы</option>
+                    <option value="cotton">Хлопок</option>
+                    <option value="silk">Шелк</option>
+                    <option value="flannel">Фланель</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="products-grid">
+            <!-- Женская пижама -->
+            <div class="product-card">
+                <span class="product-badge new">Новинка</span>
+                <img src="https://images.unsplash.com/photo-1520367445093-50dc08a59d9d" alt="Пижама женская" class="product-img">
+                <div class="product-info">
+                    <h3 class="product-title">Пижама женская "Ангел"</h3>
+                    <p class="product-description">Шелковая пижама с кружевными вставками</p>
+                    <div class="product-price">
+                        <span class="current-price">2 790 ₽</span>
+                    </div>
+                    <button class="add-to-cart">
+                        <i class="fas fa-shopping-cart"></i> В корзину
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Детская пижама -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1562157873-818bc0726f68" alt="Пижама детская" class="product-img">
+                <div class="product-info">
+                    <h3 class="product-title">Пижама детская "Мишки"</h3>
+                    <p class="product-description">Теплая фланелевая пижама с мишками</p>
+                    <div class="product-price">
+                        <span class="current-price">1 990 ₽</span>
+                        <span class="old-price">2 490 ₽</span>
+                    </div>
+                    <button class="add-to-cart">
+                        <i class="fas fa-shopping-cart"></i> В корзину
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Добавьте больше пижам по аналогии -->
+        </div>
+    </main>
+
+    <!-- Подвал (копируем из index.html) -->
+    <footer>
+        <!-- Вставьте содержимое футера из index.html -->
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+/* Стили для страницы "О нас" */
+.about-page {
+    padding: 60px 0;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.about-header h1 {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.about-header h1::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary-color);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.about-image {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-text h2 {
+    font-size: 1.8rem;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+.about-features {
+    background-color: white;
+    padding: 60px 0;
+    margin: 60px 0;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    text-align: center;
+    padding: 30px;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: var(--accent-color);
+}
+
+.team-section {
+    margin: 60px 0;
+    text-align: center;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.team-member {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+}
+
+.team-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 20px;
+    border: 5px solid var(--light-color);
+}
+
+.team-member h3 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+    color: var(--accent-color);
+}
+
+.team-position {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.team-social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.team-social a {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.team-social a:hover {
+    color: var(--primary-color);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-image {
+        height: 300px;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Активное состояние меню */
+nav a[href="about.html"] {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Хлебные крошки */
+.breadcrumbs {
+    padding: 15px 0;
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.breadcrumbs a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.breadcrumbs a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+.breadcrumbs span {
+    color: var(--text-color);
+}

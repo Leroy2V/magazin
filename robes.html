@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Халаты | Пещера Алладина</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/robes.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Шапка (копируем из index.html) -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-home logo-icon"></i>
+                    Пещера Алладина
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="robes.html" class="active">Халаты</a></li>
+                        <li><a href="pajamas.html">Пижамы</a></li>
+                        <li><a href="textiles.html">Текстиль</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="sales.html">Акции</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <i class="fas fa-search"></i>
+                    <i class="fas fa-user user-icon"></i>
+                    <i class="fas fa-shopping-cart cart-icon"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основное содержимое страницы -->
+    <main class="container">
+        <h1 class="section-title">Халаты</h1>
+        
+        <div class="breadcrumbs">
+            <a href="index.html">Главная</a> / <span>Халаты</span>
+        </div>
+
+        <div class="category-description">
+            <p>Мягкие и уютные халаты из натуральных материалов для всей семьи. Выбирайте из нашей коллекции женских, мужских и детских моделей.</p>
+        </div>
+
+        <div class="robes-filters">
+            <div class="filter-group">
+                <label>Категория:</label>
+                <select>
+                    <option value="all">Все халаты</option>
+                    <option value="women">Женские</option>
+                    <option value="men">Мужские</option>
+                    <option value="kids">Детские</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Материал:</label>
+                <select>
+                    <option value="all">Все материалы</option>
+                    <option value="cotton">Хлопок</option>
+                    <option value="microfiber">Микрофибра</option>
+                    <option value="terry">Махровые</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="products-grid">
+            <!-- Женский халат -->
+            <div class="product-card">
+                <span class="product-badge hit">Хит</span>
+                <img src="https://images.unsplash.com/photo-1595341595379-cf1cd0fb7fb3" alt="Халат женский" class="product-img">
+                <div class="product-info">
+                    <h3 class="product-title">Халат женский "Нежность"</h3>
+                    <p class="product-description">Мягкий халат из микрофибры с поясом</p>
+                    <div class="product-price">
+                        <span class="current-price">2 990 ₽</span>
+                        <span class="old-price">3 990 ₽</span>
+                    </div>
+                    <button class="add-to-cart">
+                        <i class="fas fa-shopping-cart"></i> В корзину
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Мужской халат -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1591035897819-f4bdf739f446" alt="Халат мужской" class="product-img">
+                <div class="product-info">
+                    <h3 class="product-title">Халат мужской "Комфорт"</h3>
+                    <p class="product-description">Хлопковый халат с капюшоном</p>
+                    <div class="product-price">
+                        <span class="current-price">3 490 ₽</span>
+                    </div>
+                    <button class="add-to-cart">
+                        <i class="fas fa-shopping-cart"></i> В корзину
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Добавьте больше халатов по аналогии -->
+        </div>
+    </main>
+
+    <!-- Подвал (копируем из index.html) -->
+    <footer>
+        <!-- Вставьте содержимое футера из index.html -->
+    </footer>
+
+    <script src="js/common.js"></script>
+    <script src="js/robes.js"></script>
+</body>
+</html>

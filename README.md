@@ -1,1 +1,1 @@
-# magazin
+# magazin что нибудь

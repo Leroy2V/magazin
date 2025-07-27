@@ -10,12 +10,12 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Шапка (копируем из index.html) -->
+    <!-- Шапка -->
     <header>
         <div class="container">
             <div class="header-content">
                 <a href="index.html" class="logo">
-                    <i class="fas fa-home logo-icon"></i>
+                    <i class="fas fa-home logo-icon" aria-hidden="true"></i>
                     Пещера Алладина
                 </a>
                 <nav>
@@ -25,13 +25,13 @@
                         <li><a href="pajamas.html">Пижамы</a></li>
                         <li><a href="textiles.html">Текстиль</a></li>
                         <li><a href="about.html">О нас</a></li>
-                        <li><a href="sales.html">Акции</a></li>
+                        <li><a href="sales.html" class="active">Акции</a></li>
                     </ul>
                 </nav>
                 <div class="header-actions">
-                    <i class="fas fa-search"></i>
-                    <i class="fas fa-user user-icon"></i>
-                    <i class="fas fa-shopping-cart cart-icon"></i>
+                    <button aria-label="Поиск"><i class="fas fa-search"></i></button>
+                    <button aria-label="Личный кабинет"><i class="fas fa-user user-icon"></i></button>
+                    <button aria-label="Корзина"><i class="fas fa-shopping-cart cart-icon"></i></button>
                 </div>
             </div>
         </div>
@@ -41,35 +41,77 @@
     <main class="container">
         <h1 class="section-title">Текущие акции</h1>
         
-        <div class="promo-banner">
+        <section class="promo-banner">
             <div class="promo-content">
                 <h2>Скидка 30% на все халаты</h2>
                 <p>Только до 31 декабря 2023 года</p>
                 <a href="#" class="btn">Подробнее</a>
             </div>
-        </div>
+        </section>
 
-        <div class="sales-grid">
-            <div class="sale-item">
-                <div class="sale-badge">-20%</div>
-                <img src="https://images.unsplash.com/photo-1591035897819-f4bdf739f446" alt="Халат">
-                <h3>Халаты из микрофибры</h3>
-                <p class="old-price">4 990 ₽</p>
-                <p class="new-price">3 992 ₽</p>
-            </div>
+        <section class="sales-grid">
+            <article class="sale-item">
+                <span class="sale-badge">-20%</span>
+                <img src="https://images.unsplash.com/photo-1591035897819-f4bdf739f446" alt="Халат из микрофибры" width="300" height="300">
+                <div class="sale-item-content">
+                    <h3>Халаты из микрофибры</h3>
+                    <div class="price-container">
+                        <span class="old-price">4 990 ₽</span>
+                        <span class="new-price">3 992 ₽</span>
+                    </div>
+                    <button class="add-to-cart">В корзину</button>
+                </div>
+            </article>
             
-            <div class="sale-item">
-                <div class="sale-badge">2 по цене 1</div>
-                <img src="https://images.unsplash.com/photo-1562157873-818bc0726f68" alt="Пижама">
-                <h3>Детские пижамы</h3>
-                <p>При покупке двух - одна в подарок</p>
-            </div>
-        </div>
+            <article class="sale-item">
+                <span class="sale-badge">2=1</span>
+                <img src="https://images.unsplash.com/photo-1562157873-818bc0726f68" alt="Детские пижамы" width="300" height="300">
+                <div class="sale-item-content">
+                    <h3>Детские пижамы</h3>
+                    <p>При покупке двух - одна в подарок</p>
+                    <button class="add-to-cart">В корзину</button>
+                </div>
+            </article>
+        </section>
     </main>
 
-    <!-- Подвал (копируем из index.html) -->
+    <!-- Подвал -->
     <footer>
-        <!-- Вставьте содержимое футера из index.html -->
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Магазин</h3>
+                    <ul>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="#">Каталог</a></li>
+                        <li><a href="sales.html">Акции</a></li>
+                        <li><a href="#">Новинки</a></li>
+                        <li><a href="#">Отзывы</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Помощь</h3>
+                    <ul>
+                        <li><a href="#">Доставка и оплата</a></li>
+                        <li><a href="#">Возврат и обмен</a></li>
+                        <li><a href="#">Таблица размеров</a></li>
+                        <li><a href="#">Уход за изделиями</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <address>
+                        <p><i class="fas fa-phone-alt"></i> <a href="tel:+78001234567">8 (800) 123-45-67</a></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:info@example.com">info@example.com</a></p>
+                        <p><i class="fas fa-map-marker-alt"></i> г. Москва, ул. Текстильная, 25</p>
+                    </address>
+                </div>
+            </div>
+            <div class="copyright">
+                © 2023 Пещера Алладина. Все права защищены.
+            </div>
+        </div>
     </footer>
 
     <script src="script.js"></script>

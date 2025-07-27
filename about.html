@@ -1,149 +1,227 @@
-Вот переработанная версия вашего about.html с улучшенной структурой и использованием новых стилей:
 
-```html
-<!DOCTYPE html>
+        <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>О нас - Пещера Алладина</title>
+    <title>О нас - Пещера Алладина | Магазин домашнего текстиля в Мытищах</title>
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/about.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <!-- Шапка -->
-    <header>
+    <header class="main-header">
         <div class="container">
             <div class="header-content">
                 <a href="index.html" class="logo">
-                    <i class="fas fa-home logo-icon"></i>
-                    Пещера Алладина
+                    <i class="fas fa-rug logo-icon"></i>
+                    <span>Пещера Алладина</span>
                 </a>
                 <nav>
                     <ul>
                         <li><a href="index.html">Главная</a></li>
-                        <li><a href="robes.html">Халаты</a></li>
-                        <li><a href="pajamas.html">Пижамы</a></li>
-                        <li><a href="textiles.html">Текстиль</a></li>
+                        <li><a href="bedding.html">Постельное белье</a></li>
+                        <li><a href="towels.html">Полотенца</a></li>
+                        <li><a href="curtains.html">Шторы</a></li>
                         <li><a href="about.html" class="active">О нас</a></li>
                         <li><a href="sales.html">Акции</a></li>
                     </ul>
                 </nav>
                 <div class="header-actions">
-                    <i class="fas fa-search"></i>
-                    <i class="fas fa-user user-icon"></i>
-                    <i class="fas fa-shopping-cart cart-icon"></i>
+                    <button class="icon-btn search-btn" aria-label="Поиск"><i class="fas fa-search"></i></button>
+                    <button class="icon-btn cart-btn" aria-label="Корзина">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </button>
                 </div>
             </div>
         </div>
     </header>
 
     <!-- Основное содержимое страницы -->
-    <main class="about-page container">
-        <div class="breadcrumbs">
-            <a href="index.html">Главная</a> / <span>О нас</span>
+    <main class="about-page">
+        <!-- Хлебные крошки -->
+        <div class="breadcrumbs container">
+            <ol>
+                <li><a href="index.html">Главная</a></li>
+                <li><span>О нас</span></li>
+            </ol>
         </div>
-        
-        <div class="about-header">
-            <h1>О нашем магазине</h1>
-            <p>Познакомьтесь с "Пещерой Алладина" поближе</p>
-        </div>
-        
+
+        <!-- Заголовок страницы -->
+        <section class="about-header">
+            <div class="container">
+                <h1>О нашем магазине</h1>
+                <p>Познакомьтесь с "Пещерой Алладина" - вашим магазином текстиля в Мытищах</p>
+            </div>
+        </section>
+
+        <!-- Основной контент -->
         <section class="about-section">
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df" alt="Наш магазин">
-                </div>
-                <div class="about-text">
-                    <h2>Добро пожаловать в "Пещеру Алладина"</h2>
-                    <p>Ваш уютный уголок для домашнего комфорта! Мы работаем с 2015 года, предлагая лучшие халаты, пижамы и домашний текстиль.</p>
-                    <p>Все началось с маленькой мастерской, где мы создавали первые модели халатов. Сегодня у нас собственное производство и тысячи довольных клиентов по всей России.</p>
-                    
-                    <h2>Наша миссия</h2>
-                    <p>Создавать уют в каждом доме с помощью качественных и красивых вещей. Мы верим, что домашняя одежда должна быть не только удобной, но и дарить радость каждый день.</p>
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1583845112203-454c7c7b6e2e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Ассортимент Пещеры Алладина" loading="lazy">
+                    </div>
+                    <div class="about-text">
+                        <h2>Добро пожаловать в "Пещеру Алладина"</h2>
+                        <p>Мы - магазин качественного домашнего текстиля в Мытищах, работающий с 2006 года. Наша миссия - приносить уют и комфорт в каждый дом.</p>
+                        <p>В "Пещере Алладина" вы найдете широкий ассортимент постельного белья, банных полотенец, халатов и других текстильных изделий от лучших производителей.</p>
+                        
+                        <h2>Наши принципы</h2>
+                        <p>Мы тщательно отбираем товары для нашего ассортимента, уделяя особое внимание качеству материалов и доступности цен для жителей Мытищ и всего Подмосковья.</p>
+                    </div>
                 </div>
             </div>
         </section>
         
+        <!-- Преимущества -->
         <section class="about-features">
-            <h2 class="section-title">Наши преимущества</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <i class="fas fa-medal feature-icon"></i>
-                    <h3>Качество</h3>
-                    <p>Используем только проверенные материалы и фурнитуру</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-heart feature-icon"></i>
-                    <h3>Забота о клиентах</h3>
-                    <p>Индивидуальный подход к каждому покупателю</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-tshirt feature-icon"></i>
-                    <h3>Уникальный дизайн</h3>
+            <div class="container">
+                <h2 class="section-title">Почему выбирают "Пещеру Алладина"</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-check-circle feature-icon"></i>
+                        <h3>Качество</h3>
+                        <p>Только проверенные производители и материалы</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-ruble-sign feature-icon"></i>
+                        <h3>Доступные цены</h3>
+                        <p>Разумные цены для жителей Мытищ</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-map-marker-alt feature-icon"></i>
+                        <h3>Удобное расположение</h3>
+                        <p>Наш магазин находится в  Мытищи</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-headset feature-icon"></i>
+                        <h3>Консультации</h3>
+                        <p>Поможем выбрать идеальный текстиль для вашего дома</p>
+                    </div>
                 </div>
             </div>
         </section>
         
-        <section class="team-section">
-            <h2 class="section-title">Наша команда</h2>
-            <div class="team-grid">
-                <div class="team-member">
-                    <img src=""team-photo">
-                    <h3>Алла Мизина</h3>
-                    <p class="team-position">Основатель магазина</p>
-                    <p>"Моя цель - сделать домашний уют доступным для каждого"</p>
-                    <div class="team-social">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-vk"></i></a>
+        <!-- Отзывы -->
+        <section class="reviews-section">
+            <div class="container">
+                <h2 class="section-title">Отзывы наших покупателей</h2>
+                
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Ольга" class="review-photo">
+                            <div class="review-author">
+                                <h3>Ольга, Мытищи</h3>
+                                <div class="review-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="review-text">"Покупаю постельное белье в "Пещере Алладина" уже несколько лет. Качество отличное, после многих стирок выглядит как новое. Рекомендую!"</p>
+                    </div>
+                    
+                    <div class="review-card">
+                        <div class="review-header">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Иван" class="review-photo">
+                            <div class="review-author">
+                                <h3>Иван, Королёв</h3>
+                                <div class="review-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="review-text">"Отличные банные полотенца - плотные, мягкие, хорошо впитывают. Удобно, что есть магазин с таким ассортиментом в Мытищах."</p>
+                    </div>
+                    
+                    <div class="review-card">
+                        <div class="review-header">
+                            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Елена" class="review-photo">
+                            <div class="review-author">
+                                <h3>Елена, Мытищи</h3>
+                                <div class="review-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="review-text">"Заказывала шторы - помогли с выбором ткани и размера. Получилось именно то, что я хотела. Спасибо за профессиональный подход!"</p>
                     </div>
                 </div>
-                <div class="team-member">
-                    <p class="team-position">Главный дизайнер</p>
-                    <p>"Создаю модели, в которых вам будет комфортно и стильно"</p>
-                    <div class="team-social">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-telegram"></i></a>
-                    </div>
+            </div>
+        </section>
+        
+        <!-- Блок с призывом к действию -->
+        <section class="about-cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Приходите к нам в магазин!</h2>
+                    <p>Мы находимся в Мытищах и всегда рады помочь вам с выбором</p>
+                    <a href="contacts.html" class="cta-button">Как нас найти</a>
                 </div>
             </div>
         </section>
     </main>
 
     <!-- Подвал -->
-    <footer>
+    <footer class="main-footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>Магазин</h3>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Пещера Алладина</h3>
+                    <p>Магазин домашнего текстиля в Мытищах</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="VKontakte"><i class="fab fa-vk"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Каталог</h3>
                     <ul>
-                        <li><a href="index.html">Главная</a></li>
-                        <li><a href="robes.html">Халаты</a></li>
-                        <li><a href="pajamas.html">Пижамы</a></li>
-                        <li><a href="textiles.html">Текстиль</a></li>
-                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="bedding.html">Постельное белье</a></li>
+                        <li><a href="towels.html">Полотенца</a></li>
+                        <li><a href="curtains.html">Шторы</a></li>
                         <li><a href="sales.html">Акции</a></li>
                     </ul>
                 </div>
-                <div class="footer-column">
+                <div class="footer-col">
                     <h3>Помощь</h3>
                     <ul>
                         <li><a href="#">Доставка и оплата</a></li>
                         <li><a href="#">Возврат и обмен</a></li>
-                        <li><a href="#">Таблица размеров</a></li>
-                        <li><a href="#">Уход за изделиями</a></li>
+                        <li><a href="#">Размерные сетки</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
                     </ul>
                 </div>
-                <div class="footer-column">
+                <div class="footer-col">
                     <h3>Контакты</h3>
-                    <ul>
-                        <li><i class="fas fa-phone-alt"></i> <a href="tel:+78001234567">8 (800) 123-45-67</a></li>
-                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@pechera-alladina.ru">info@pechera-alladina.ru</a></li>
-                        <li><i class="fas fa-map-marker-alt"></i> г. Москва, ул. Текстильная, 25</li>
-                    </ul>
+                    <p><i class="fas fa-map-marker-alt"></i> г. Мытищи, ул. Мира, 15</p>
+                    <p><i class="fas fa-phone"></i> +7 (495) 123-45-67</p>
+                    <p><i class="fas fa-envelope"></i> info@alladina-cave.ru</p>
+                    <p><i class="fas fa-clock"></i> Пн-Пт: 10:00-20:00, Сб-Вс: 10:00-18:00</p>
                 </div>
-                <div class="footer-column">
-              
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Пещера Алладина. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
 
+    <script src="script.js"></script>
+</body>
+</html>

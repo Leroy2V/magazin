@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Акции - Пещера Алладина</title>
+    <title>Акции и спецпредложения | Пещера Алладина</title>
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/sales.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <!-- Шапка -->
-    <header>
+    <header class="main-header">
         <div class="container">
             <div class="header-content">
                 <a href="index.html" class="logo">
-                    <i class="fas fa-home logo-icon" aria-hidden="true"></i>
-                    Пещера Алладина
+                    <i class="fas fa-gem logo-icon"></i>
+                    <span>Пещера Алладина</span>
                 </a>
                 <nav>
                     <ul>
@@ -29,91 +29,184 @@
                     </ul>
                 </nav>
                 <div class="header-actions">
-                    <button aria-label="Поиск"><i class="fas fa-search"></i></button>
-                    <button aria-label="Личный кабинет"><i class="fas fa-user user-icon"></i></button>
-                    <button aria-label="Корзина"><i class="fas fa-shopping-cart cart-icon"></i></button>
+                    <button class="icon-btn search-btn" aria-label="Поиск"><i class="fas fa-search"></i></button>
+                    <button class="icon-btn user-btn" aria-label="Личный кабинет"><i class="fas fa-user"></i></button>
+                    <button class="icon-btn cart-btn" aria-label="Корзина">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </button>
                 </div>
             </div>
         </div>
     </header>
 
+    <!-- Хлебные крошки -->
+    <div class="breadcrumbs container">
+        <ol>
+            <li><a href="index.html">Главная</a></li>
+            <li><span>Акции</span></li>
+        </ol>
+    </div>
+
     <!-- Основной контент страницы -->
-    <main class="container">
-        <h1 class="section-title">Текущие акции</h1>
-        
+    <main>
         <section class="promo-banner">
-            <div class="promo-content">
-                <h2>Скидка 30% на все халаты</h2>
-                <p>Только до 31 декабря 2023 года</p>
-                <a href="#" class="btn">Подробнее</a>
+            <div class="container">
+                <div class="promo-content">
+                    <h1>Специальные предложения</h1>
+                    <p>Только лучшие акции для наших клиентов</p>
+                </div>
             </div>
         </section>
 
-        <section class="sales-grid">
-            <article class="sale-item">
-                <span class="sale-badge">-20%</span>
-                <img src="https://images.unsplash.com/photo-1591035897819-f4bdf739f446" alt="Халат из микрофибры" width="300" height="300">
-                <div class="sale-item-content">
-                    <h3>Халаты из микрофибры</h3>
-                    <div class="price-container">
-                        <span class="old-price">4 990 ₽</span>
-                        <span class="new-price">3 992 ₽</span>
+        <section class="container">
+            <div class="section-header">
+                <h2 class="section-title">Текущие акции</h2>
+                <div class="timer-badge">
+                    <i class="fas fa-clock"></i>
+                    <span id="countdown">До конца акции: 12д 06:45:32</span>
+                </div>
+            </div>
+
+            <div class="sales-grid">
+                <!-- Товар 1 -->
+                <article class="sale-item">
+                    <span class="sale-badge">-30%</span>
+                    <div class="sale-item-img">
+                        <img src="https://images.unsplash.com/photo-1591035897819-f4bdf739f446?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Халат из микрофибры" loading="lazy">
                     </div>
-                    <button class="add-to-cart">В корзину</button>
+                    <div class="sale-item-content">
+                        <h3>Халаты из микрофибры</h3>
+                        <p class="sale-description">Невероятно мягкие и удобные халаты премиум-класса</p>
+                        <div class="price-container">
+                            <span class="old-price">4 990 ₽</span>
+                            <span class="new-price">3 492 ₽</span>
+                        </div>
+                        <div class="sale-meta">
+                            <span class="sale-stock"><i class="fas fa-check-circle"></i> В наличии</span>
+                            <span class="sale-limit">Осталось 12 шт.</span>
+                        </div>
+                        <button class="add-to-cart">
+                            <i class="fas fa-shopping-cart"></i> В корзину
+                        </button>
+                    </div>
+                </article>
+                
+                <!-- Товар 2 -->
+                <article class="sale-item">
+                    <span class="sale-badge">2=1</span>
+                    <div class="sale-item-img">
+                        <img src="https://images.unsplash.com/photo-1562157873-818bc0726f68?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Детские пижамы" loading="lazy">
+                    </div>
+                    <div class="sale-item-content">
+                        <h3>Детские пижамы</h3>
+                        <p class="sale-description">При покупке двух пижам - одна в подарок</p>
+                        <div class="price-container">
+                            <span class="single-price">1 790 ₽ за 1 шт.</span>
+                        </div>
+                        <div class="sale-meta">
+                            <span class="sale-stock"><i class="fas fa-check-circle"></i> В наличии</span>
+                            <span class="sale-limit">Осталось 8 комплектов</span>
+                        </div>
+                        <button class="add-to-cart">
+                            <i class="fas fa-shopping-cart"></i> В корзину
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Товар 3 -->
+                <article class="sale-item">
+                    <span class="sale-badge">-25%</span>
+                    <div class="sale-item-img">
+                        <img src="https://images.unsplash.com/photo-1592078615290-033ee584e267?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Постельное белье" loading="lazy">
+                    </div>
+                    <div class="sale-item-content">
+                        <h3>Постельное белье</h3>
+                        <p class="sale-description">Наборы из 100% сатина с эксклюзивным дизайном</p>
+                        <div class="price-container">
+                            <span class="old-price">6 490 ₽</span>
+                            <span class="new-price">4 867 ₽</span>
+                        </div>
+                        <div class="sale-meta">
+                            <span class="sale-stock"><i class="fas fa-check-circle"></i> В наличии</span>
+                            <span class="sale-limit">Осталось 5 наборов</span>
+                        </div>
+                        <button class="add-to-cart">
+                            <i class="fas fa-shopping-cart"></i> В корзину
+                        </button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Дополнительный баннер -->
+        <section class="secondary-banner">
+            <div class="container">
+                <div class="banner-content">
+                    <h2>Подпишитесь на рассылку</h2>
+                    <p>Получайте эксклюзивные предложения первыми</p>
+                    <form class="subscribe-form">
+                        <input type="email" placeholder="Ваш e-mail" required>
+                        <button type="submit">Подписаться</button>
+                    </form>
                 </div>
-            </article>
-            
-            <article class="sale-item">
-                <span class="sale-badge">2=1</span>
-                <img src="https://images.unsplash.com/photo-1562157873-818bc0726f68" alt="Детские пижамы" width="300" height="300">
-                <div class="sale-item-content">
-                    <h3>Детские пижамы</h3>
-                    <p>При покупке двух - одна в подарок</p>
-                    <button class="add-to-cart">В корзину</button>
-                </div>
-            </article>
+            </div>
         </section>
     </main>
 
     <!-- Подвал -->
-    <footer>
+    <footer class="main-footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>Магазин</h3>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Пещера Алладина</h3>
+                    <p>Магазин роскошного домашнего текстиля и одежды для дома</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Каталог</h3>
+                    <ul>
+                        <li><a href="#">Халаты</a></li>
+                        <li><a href="pajamas.html">Пижамы</a></li>
+                        <li><a href="textiles.html">Текстиль</a></li>
+                        <li><a href="sales.html">Акции</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Информация</h3>
                     <ul>
                         <li><a href="about.html">О нас</a></li>
-                        <li><a href="#">Каталог</a></li>
-                        <li><a href="sales.html">Акции</a></li>
-                        <li><a href="#">Новинки</a></li>
-                        <li><a href="#">Отзывы</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Помощь</h3>
-                    <ul>
                         <li><a href="#">Доставка и оплата</a></li>
                         <li><a href="#">Возврат и обмен</a></li>
-                        <li><a href="#">Таблица размеров</a></li>
-                        <li><a href="#">Уход за изделиями</a></li>
-                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Контакты</a></li>
                     </ul>
                 </div>
-                <div class="footer-column">
+                <div class="footer-col">
                     <h3>Контакты</h3>
-                    <address>
-                        <p><i class="fas fa-phone-alt"></i> <a href="tel:+78001234567">8 (800) 123-45-67</a></p>
-                        <p><i class="fas fa-envelope"></i> <a href="mailto:info@example.com">info@example.com</a></p>
-                        <p><i class="fas fa-map-marker-alt"></i> г. Москва, ул. Текстильная, 25</p>
-                    </address>
+                    <p><i class="fas fa-map-marker-alt"></i> г. Москва, ул. Текстильная, 15</p>
+                    <p><i class="fas fa-phone"></i> +7 (495) 123-45-67</p>
+                    <p><i class="fas fa-envelope"></i> info@alladina-cave.ru</p>
                 </div>
             </div>
-            <div class="copyright">
-                © 2023 Пещера Алладина. Все права защищены.
+            <div class="footer-bottom">
+                <p>&copy; 2023 Пещера Алладина. Все права защищены.</p>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Таймер обратного отсчета (пример)
+        function updateCountdown() {
+            const countdownElement = document.getElementById('countdown');
+            // Здесь должна быть логика обновления таймера
+            countdownElement.textContent = 'До конца акции: 12д 06:45:32';
+        }
+        setInterval(updateCountdown, 1000);
+    </script>
 </body>
 </html>

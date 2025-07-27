@@ -3,75 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Домашний текстиль | Пещера Алладина</title>
+    <title>Роскошный домашний текстиль | Пещера Алладина</title>
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/textiles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Шапка (копируем из index.html) -->
-    <header>
+    <!-- Шапка -->
+    <header class="main-header">
         <div class="container">
             <div class="header-content">
                 <a href="index.html" class="logo">
-                    <i class="fas fa-home logo-icon"></i>
-                    Пещера Алладина
+                    <i class="fas fa-gem logo-icon"></i>
+                    <span>Пещера Алладина</span>
                 </a>
                 <nav>
                     <ul>
                         <li><a href="index.html">Главная</a></li>
                         <li><a href="#">Халаты</a></li>
                         <li><a href="pajamas.html">Пижамы</a></li>
-                        <li><a href="textiles.html">Текстиль</a></li>
+                        <li><a href="textiles.html" class="active">Текстиль</a></li>
                         <li><a href="about.html">О нас</a></li>
                         <li><a href="sales.html">Акции</a></li>
                     </ul>
                 </nav>
                 <div class="header-actions">
-                    <i class="fas fa-search"></i>
-                    <i class="fas fa-user user-icon"></i>
-                    <i class="fas fa-shopping-cart cart-icon"></i>
+                    <button class="icon-btn search-btn"><i class="fas fa-search"></i></button>
+                    <button class="icon-btn user-btn"><i class="fas fa-user"></i></button>
+                    <button class="icon-btn cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </button>
                 </div>
             </div>
         </div>
     </header>
 
+    <!-- Хлебные крошки -->
     <div class="breadcrumbs container">
-        <a href="index.html">Главная</a> / <span>Текстиль</span>
+        <ol>
+            <li><a href="index.html">Главная</a></li>
+            <li><span>Роскошный текстиль</span></li>
+        </ol>
     </div>
-    <!-- Основное содержимое страницы -->
-    <main class="container">
-        <h1 class="section-title">Домашний текстиль</h1>
-        
-        <div class="category-description">
-            <p>Уютные и качественные текстильные изделия для вашего дома. Все товары изготовлены из натуральных материалов.</p>
-        </div>
 
-        <div class="textile-categories">
-            <div class="category-card">
-                <img src="https://images.unsplash.com/photo-1592078615290-033ee584e267" alt="Постельное белье">
-                <h3>Постельное белье</h3>
-                <a href="#" class="btn">Смотреть коллекцию</a>
+    <!-- Основное содержимое страницы -->
+    <main>
+        <section class="textile-header">
+            <div class="container">
+                <h1>Роскошный домашний текстиль</h1>
+                <p>Эксклюзивные коллекции из натуральных материалов для создания уюта в вашем доме</p>
             </div>
-            
-            <div class="category-card">
-                <img src="https://images.unsplash.com/photo-1556905055-8e7cb5f4a8c4" alt="Пледы">
-                <h3>Пледы и покрывала</h3>
-                <a href="#" class="btn">Смотреть коллекцию</a>
+        </section>
+
+        <section class="container">
+            <div class="category-description">
+                <p>Наш текстиль — это гармония качества, комфорта и изысканного дизайна. Каждое изделие создано с заботой о вашем уюте.</p>
             </div>
-            
-            <div class="category-card">
-                <img src="https://images.unsplash.com/photo-1583845112203-454c7c7b6e2e" alt="Полотенца">
-                <h3>Банные полотенца</h3>
-                <a href="#" class="btn">Смотреть коллекцию</a>
+
+            <div class="textile-categories">
+                <!-- Карточка 1 -->
+                <div class="category-card">
+                    <div class="category-card-img-container">
+                        <img src="https://images.unsplash.com/photo-1592078615290-033ee584e267?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Постельное белье премиум класса">
+                    </div>
+                    <div class="category-card-content">
+                        <h3>Постельное белье</h3>
+                        <p>Сатин, перкаль и бязь высочайшего качества</p>
+                        <a href="#" class="btn">Смотреть коллекцию <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Карточка 2 -->
+                <div class="category-card">
+                    <div class="category-card-img-container">
+                        <img src="https://images.unsplash.com/photo-1556905055-8e7cb5f4a8c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Роскошные пледы и покрывала">
+                    </div>
+                    <div class="category-card-content">
+                        <h3>Пледы и покрывала</h3>
+                        <p>Теплые кашемировые и мягкие велюровые модели</p>
+                        <a href="#" class="btn">Смотреть коллекцию <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Карточка 3 -->
+                <div class="category-card">
+                    <div class="category-card-img-container">
+                        <img src="https://images.unsplash.com/photo-1583845112203-454c7c7b6e2e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Банные полотенца">
+                    </div>
+                    <div class="category-card-content">
+                        <h3>Банные полотенца</h3>
+                        <p>Махровые и вафельные полотенца премиум-класса</p>
+                        <a href="#" class="btn">Смотреть коллекцию <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Карточка 4 -->
+                <div class="category-card">
+                    <div class="category-card-img-container">
+                        <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Домашний текстиль">
+                    </div>
+                    <div class="category-card-content">
+                        <h3>Декор для дома</h3>
+                        <p>Скатерти, салфетки и декоративные подушки</p>
+                        <a href="#" class="btn">Смотреть коллекцию <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
+
+        <!-- Блок с преимуществами -->
+        <section class="textile-benefits">
+            <div class="container">
+                <h2 class="benefits-title">Почему выбирают наш текстиль</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <i class="fas fa-leaf"></i>
+                        <h3>Натуральные материалы</h3>
+                        <p>100% хлопок, лен, бамбук и другие экологичные ткани</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-palette"></i>
+                        <h3>Уникальный дизайн</h3>
+                        <p>Эксклюзивные расцветки и авторские принты</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-award"></i>
+                        <h3>Высокое качество</h3>
+                        <p>Ручной контроль качества каждого изделия</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- Подвал (копируем из index.html) -->
-    <footer>
-        <!-- Вставьте содержимое футера из index.html -->
+    <!-- Подвал -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Пещера Алладина</h3>
+                    <p>Магазин роскошного домашнего текстиля и одежды для дома</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Каталог</h3>
+                    <ul>
+                        <li><a href="#">Халаты</a></li>
+                        <li><a href="pajamas.html">Пижамы</a></li>
+                        <li><a href="textiles.html">Текстиль</a></li>
+                        <li><a href="sales.html">Акции</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Информация</h3>
+                    <ul>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="#">Доставка и оплата</a></li>
+                        <li><a href="#">Возврат и обмен</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Контакты</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> г. Москва, ул. Текстильная, 15</p>
+                    <p><i class="fas fa-phone"></i> +7 (495) 123-45-67</p>
+                    <p><i class="fas fa-envelope"></i> info@alladina-cave.ru</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Пещера Алладина. Все права защищены.</p>
+            </div>
+        </div>
     </footer>
 
     <script src="script.js"></script>

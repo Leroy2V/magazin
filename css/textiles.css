@@ -1,66 +1,268 @@
-/* Стили для страницы текстиля */
-.textile-categories {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
+/* Стили для страницы текстиля с красивыми картинками */
+:root {
+  --textile-primary: #e83e8c; /* Розовый вместо красного для более мягкого вида */
+  --textile-secondary: #6c5ce7; /* Фиолетовый для акцентов */
+  --textile-light: #fff;
+  --textile-dark: #2d3436; /* Темно-серый вместо черного */
+  --textile-gray: #636e72;
+  --textile-muted: #b2bec3;
+  --textile-border: #dfe6e9;
+  --textile-shadow: 0 15px 30px rgba(0,0,0,0.12);
+  --textile-transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --overlay-gradient: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%);
 }
 
-.category-card {
-    border: 1px solid #f0f0f0;
-    border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.3s ease;
+.textile-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+  color: white;
+  border-radius: 0.5rem;
+  overflow: hidden;
 }
 
-.category-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+.textile-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('https://images.unsplash.com/photo-1533090161767-e6ffed986c88?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover;
+  opacity: 0.9;
+  z-index: 0;
 }
 
-.category-card img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
+.textile-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
-.category-card h3 {
-    padding: 15px;
-    margin: 0;
-    text-align: center;
-}
-
-.category-card .btn {
-    display: block;
-    margin: 0 auto 20px;
-    width: 80%;
-    text-align: center;
+.textile-header p {
+  font-size: 1.25rem;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
 }
 
 .category-description {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 40px;
-    font-size: 1.1em;
-    color: #555;
+  text-align: center;
+  max-width: 50rem;
+  margin: 2rem auto 3rem;
+  font-size: 1.125rem;
+  color: var(--textile-gray);
+  line-height: 1.7;
+  padding: 0 1.5rem;
+  font-style: italic;
+  position: relative;
 }
 
+.category-description::before,
+.category-description::after {
+  content: '"';
+  color: var(--textile-primary);
+  font-size: 1.5em;
+}
+
+.textile-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  gap: 2rem;
+  padding: 0 1.5rem;
+}
+
+.category-card {
+  border-radius: 0.75rem;
+  overflow: hidden;
+  transition: var(--textile-transition);
+  background: var(--textile-light);
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.category-card:hover {
+  transform: translateY(-0.5rem) scale(1.02);
+  box-shadow: var(--textile-shadow);
+}
+
+.category-card-img-container {
+  position: relative;
+  overflow: hidden;
+  height: 18rem;
+}
+
+.category-card-img-container::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: var(--overlay-gradient);
+}
+
+.category-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.category-card:hover img {
+  transform: scale(1.1);
+}
+
+.category-card-content {
+  padding: 1.5rem;
+  text-align: center;
+  position: relative;
+}
+
+.category-card h3 {
+  margin: 0 0 1rem;
+  font-size: 1.375rem;
+  color: var(--textile-dark);
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+}
+
+.category-card h3::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3rem;
+  height: 0.1875rem;
+  background: var(--textile-primary);
+  transition: width 0.3s ease;
+}
+
+.category-card:hover h3::after {
+  width: 5rem;
+}
+
+.category-card .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.75rem;
+  background-color: var(--textile-primary);
+  color: var(--textile-light);
+  border-radius: 2rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--textile-transition);
+  border: none;
+  margin-top: 1rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.category-card .btn:hover {
+  background-color: var(--textile-secondary);
+  transform: translateY(-2px);
+  box-shadow: 0 7px 14px rgba(0,0,0,0.2);
+}
+
+.category-card .btn i {
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.category-card .btn:hover i {
+  transform: translateX(3px);
+}
+
+/* Хлебные крошки */
 .breadcrumbs {
-    padding: 15px 0;
-    font-size: 0.9em;
-    color: #777;
+  padding: 1.5rem 0;
+  font-size: 0.875rem;
+  color: var(--textile-muted);
+  margin: 0 1.5rem 2rem;
+  border-bottom: 1px solid var(--textile-border);
+}
+
+.breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.breadcrumbs li {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumbs li:not(:last-child)::after {
+  content: '›';
+  margin: 0 0.75rem;
+  color: var(--textile-muted);
 }
 
 .breadcrumbs a {
-    color: #777;
-    text-decoration: none;
+  color: var(--textile-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 .breadcrumbs a:hover {
-    text-decoration: underline;
+  color: var(--textile-primary);
 }
 
-nav a[href="textiles.html"] {
-    color: #ff6b6b;
-    font-weight: bold;
+/* Адаптивность */
+@media (max-width: 62rem) {
+  .textile-header h1 {
+    font-size: 2rem;
+  }
+  
+  .textile-categories {
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  }
+  
+  .category-card-img-container {
+    height: 16rem;
+  }
+}
+
+@media (max-width: 48rem) {
+  .textile-header {
+    padding: 1.5rem;
+  }
+  
+  .textile-header h1 {
+    font-size: 1.75rem;
+  }
+  
+  .textile-header p {
+    font-size: 1.1rem;
+  }
+  
+  .category-description {
+    font-size: 1rem;
+  }
+  
+  .textile-categories {
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 36rem) {
+  .textile-categories {
+    grid-template-columns: 1fr;
+  }
+  
+  .category-card-img-container {
+    height: 14rem;
+  }
 }

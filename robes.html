@@ -10,7 +10,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Шапка (копируем из index.html) -->
+    <!-- Шапка -->
     <header>
         <div class="container">
             <div class="header-content">
@@ -42,32 +42,11 @@
         <h1 class="section-title">Халаты</h1>
         
         <div class="breadcrumbs">
-            <a href="index.html">Главная</a> / <span>Халаты</span>
+            <a href="index.html">Главная</a> / <span>халаты</span>
         </div>
 
         <div class="category-description">
-            <p>Мягкие и уютные халаты из натуральных материалов для всей семьи. Выбирайте из нашей коллекции женских, мужских и детских моделей.</p>
-        </div>
-
-        <div class="robes-filters">
-            <div class="filter-group">
-                <label>Категория:</label>
-                <select>
-                    <option value="all">Все халаты</option>
-                    <option value="women">Женские</option>
-                    <option value="men">Мужские</option>
-                    <option value="kids">Детские</option>
-                </select>
-            </div>
-            <div class="filter-group">
-                <label>Материал:</label>
-                <select>
-                    <option value="all">Все материалы</option>
-                    <option value="cotton">Хлопок</option>
-                    <option value="microfiber">Микрофибра</option>
-                    <option value="terry">Махровые</option>
-                </select>
-            </div>
+            <p>Наши халаты созданы для максимального комфорта и уюта. Изготовленные из высококачественных натуральных материалов, они подарят вам ощущение тепла и расслабления после долгого дня.</p>
         </div>
 
         <div class="products-grid">
@@ -103,13 +82,65 @@
                 </div>
             </div>
             
-            <!-- Добавьте больше халатов по аналогии -->
+            <!-- Детский халат -->
+            <div class="product-card">
+                <span class="product-badge new">Новинка</span>
+                <img src="https://images.unsplash.com/photo-1595341883846-a3a88a7a5e1a" alt="Халат детский" class="product-img">
+                <div class="product-info">
+                    <h3 class="product-title">Халат детский "Малыш"</h3>
+                    <p class="product-description">Мягкий махровый халат для детей</p>
+                    <div class="product-price">
+                        <span class="current-price">1 990 ₽</span>
+                    </div>
+                    <button class="add-to-cart">
+                        <i class="fas fa-shopping-cart"></i> В корзину
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Еще один женский халат -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1595341883846-a3a88a7a5e1b" alt="Халат женский" class="product-img">
+                <div class="product-info">
+                    <h3 class="product-title">Халат женский "Элеганс"</h3>
+                    <p class="product-description">Шелковый халат с вышивкой</p>
+                    <div class="product-price">
+                        <span class="current-price">4 990 ₽</span>
+                    </div>
+                    <button class="add-to-cart">
+                        <i class="fas fa-shopping-cart"></i> В корзину
+                    </button>
+                </div>
+            </div>
         </div>
     </main>
 
-    <!-- Подвал (копируем из index.html) -->
+    <!-- Подвал -->
     <footer>
-        <!-- Вставьте содержимое футера из index.html -->
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Пещера Алладина</h3>
+                    <p>Магазин домашнего текстиля и одежды для сна</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <p><i class="fas fa-phone"></i> +7 (123) 456-78-90</p>
+                    <p><i class="fas fa-envelope"></i> info@alladina-cave.ru</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Мы в соцсетях</h3>
+                    <div class="social-icons">
+                        <i class="fab fa-vk"></i>
+                        <i class="fab fa-telegram"></i>
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Пещера Алладина. Все права защищены.</p>
+            </div>
+        </div>
     </footer>
 
     <script src="js/common.js"></script>

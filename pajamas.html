@@ -10,7 +10,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Шапка (копируем из index.html) -->
+    <!-- Шапка -->
     <header>
         <div class="container">
             <div class="header-content">
@@ -21,8 +21,8 @@
                 <nav>
                     <ul>
                         <li><a href="index.html">Главная</a></li>
-                        <li><a href="#">Халаты</a></li>
-                        <li><a href="pajamas.html">Пижамы</a></li>
+                        <li><a href="robes.html">Халаты</a></li>
+                        <li><a href="pajamas.html" class="active">Пижамы</a></li>
                         <li><a href="textiles.html">Текстиль</a></li>
                         <li><a href="about.html">О нас</a></li>
                         <li><a href="sales.html">Акции</a></li>
@@ -46,40 +46,35 @@
         </div>
 
         <div class="category-description">
-            <p>Уютные пижамы из натуральных материалов для всей семьи. Выбирайте из нашей коллекции женских, мужских и детских моделей.</p>
-        </div>
-
-        <div class="pajamas-filters">
-            <div class="filter-group">
-                <label>Категория:</label>
-                <select>
-                    <option value="all">Все пижамы</option>
-                    <option value="women">Женские</option>
-                    <option value="men">Мужские</option>
-                    <option value="kids">Детские</option>
-                </select>
-            </div>
-            <div class="filter-group">
-                <label>Материал:</label>
-                <select>
-                    <option value="all">Все материалы</option>
-                    <option value="cotton">Хлопок</option>
-                    <option value="silk">Шелк</option>
-                    <option value="flannel">Фланель</option>
-                </select>
-            </div>
+            <p>Уютные пижамы для комфортного сна и отдыха. Наши коллекции созданы из натуральных дышащих материалов, которые обеспечат вам идеальный температурный баланс всю ночь.</p>
         </div>
 
         <div class="products-grid">
             <!-- Женская пижама -->
             <div class="product-card">
-                <span class="product-badge new">Новинка</span>
-                <img src="https://images.unsplash.com/photo-1520367445093-50dc08a59d9d" alt="Пижама женская" class="product-img">
+                <span class="product-badge hit">Хит</span>
+                <img src="https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9" alt="Пижама женская" class="product-img">
                 <div class="product-info">
                     <h3 class="product-title">Пижама женская "Ангел"</h3>
-                    <p class="product-description">Шелковая пижама с кружевными вставками</p>
+                    <p class="product-description">Хлопковый комплект с милым принтом</p>
                     <div class="product-price">
-                        <span class="current-price">2 790 ₽</span>
+                        <span class="current-price">3 290 ₽</span>
+                        <span class="old-price">3 990 ₽</span>
+                    </div>
+                    <button class="add-to-cart">
+                        <i class="fas fa-shopping-cart"></i> В корзину
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Мужская пижама -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea" alt="Пижама мужская" class="product-img">
+                <div class="product-info">
+                    <h3 class="product-title">Пижама мужская "Босс"</h3>
+                    <p class="product-description">Комплект из сатина с классическим рисунком</p>
+                    <div class="product-price">
+                        <span class="current-price">3 790 ₽</span>
                     </div>
                     <button class="add-to-cart">
                         <i class="fas fa-shopping-cart"></i> В корзину
@@ -89,13 +84,13 @@
             
             <!-- Детская пижама -->
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1562157873-818bc0726f68" alt="Пижама детская" class="product-img">
+                <span class="product-badge new">Новинка</span>
+                <img src="https://images.unsplash.com/photo-1595341595379-cf1cd0fb7fb3" alt="Пижама детская" class="product-img">
                 <div class="product-info">
-                    <h3 class="product-title">Пижама детская "Мишки"</h3>
-                    <p class="product-description">Теплая фланелевая пижама с мишками</p>
+                    <h3 class="product-title">Пижама детская "Звездочка"</h3>
+                    <p class="product-description">Мягкий комплект с веселыми звездами</p>
                     <div class="product-price">
-                        <span class="current-price">1 990 ₽</span>
-                        <span class="old-price">2 490 ₽</span>
+                        <span class="current-price">2 490 ₽</span>
                     </div>
                     <button class="add-to-cart">
                         <i class="fas fa-shopping-cart"></i> В корзину
@@ -103,15 +98,52 @@
                 </div>
             </div>
             
-            <!-- Добавьте больше пижам по аналогии -->
+            <!-- Еще одна женская пижама -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1595341883846-a3a88a7a5e1b" alt="Пижама женская" class="product-img">
+                <div class="product-info">
+                    <h3 class="product-title">Пижама женская "Шелк"</h3>
+                    <p class="product-description">Роскошный шелковый комплект</p>
+                    <div class="product-price">
+                        <span class="current-price">5 990 ₽</span>
+                    </div>
+                    <button class="add-to-cart">
+                        <i class="fas fa-shopping-cart"></i> В корзину
+                    </button>
+                </div>
+            </div>
         </div>
     </main>
 
-    <!-- Подвал (копируем из index.html) -->
+    <!-- Подвал -->
     <footer>
-        <!-- Вставьте содержимое футера из index.html -->
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Пещера Алладина</h3>
+                    <p>Магазин домашнего текстиля и одежды для сна</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <p><i class="fas fa-phone"></i> +7 (123) 456-78-90</p>
+                    <p><i class="fas fa-envelope"></i> info@alladina-cave.ru</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Мы в соцсетях</h3>
+                    <div class="social-icons">
+                        <i class="fab fa-vk"></i>
+                        <i class="fab fa-telegram"></i>
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Пещера Алладина. Все права защищены.</p>
+            </div>
+        </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/pajamas.js"></script>
 </body>
 </html>

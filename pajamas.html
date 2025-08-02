@@ -6,7 +6,7 @@
     <title>Пижамы | Пещера Алладина</title>
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/pajamas.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
@@ -29,9 +29,9 @@
                     </ul>
                 </nav>
                 <div class="header-actions">
-                    <i class="fas fa-search"></i>
-                    <i class="fas fa-user user-icon"></i>
-                    <i class="fas fa-shopping-cart cart-icon"></i>
+                    <button aria-label="Поиск"><i class="fas fa-search"></i></button>
+                    <button aria-label="Личный кабинет"><i class="fas fa-user user-icon"></i></button>
+                    <button aria-label="Корзина"><i class="fas fa-shopping-cart cart-icon"></i></button>
                 </div>
             </div>
         </div>
@@ -119,26 +119,47 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Пещера Алладина</h3>
-                    <p>Магазин домашнего текстиля и одежды для сна</p>
+                <div class="footer-column">
+                    <h3>Магазин</h3>
+                    <ul>
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Каталог</a></li>
+                        <li><a href="#">Акции</a></li>
+                        <li><a href="#">Новинки</a></li>
+                        <li><a href="#">Отзывы</a></li>
+                    </ul>
                 </div>
-                <div class="footer-section">
+                <div class="footer-column">
+                    <h3>Помощь</h3>
+                    <ul>
+                        <li><a href="#">Доставка и оплата</a></li>
+                        <li><a href="#">Возврат и обмен</a></li>
+                        <li><a href="#">Таблица размеров</a></li>
+                        <li><a href="#">Уход за изделиями</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
                     <h3>Контакты</h3>
-                    <p><i class="fas fa-phone"></i> +7 (123) 456-78-90</p>
-                    <p><i class="fas fa-envelope"></i> info@alladina-cave.ru</p>
+                    <ul>
+                        <li><i class="fas fa-phone-alt"></i> <a href="tel:+78001234567">8 (800) 123-45-67</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@pechera-alladina.ru">info@pechera-alladina.ru</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> г. Мытищи, ТЦ "Голубой Дунай", ул. Юбилейная, д. 35, корп. 3</li>
+                        <li><i class="fas fa-clock"></i> Пн-Пт: 9:00-21:00, Сб-Вс: 10:00-20:00</li>
+                    </ul>
                 </div>
-                <div class="footer-section">
+                <div class="footer-column">
                     <h3>Мы в соцсетях</h3>
-                    <div class="social-icons">
-                        <i class="fab fa-vk"></i>
-                        <i class="fab fa-telegram"></i>
-                        <i class="fab fa-instagram"></i>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
+                    <p>Подписывайтесь на нас, чтобы быть в курсе новинок и акций</p>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2023 Пещера Алладина. Все права защищены.</p>
+            <div class="copyright">
+                © 2025 Пещера Алладина. Все права защищены.
             </div>
         </div>
     </footer>

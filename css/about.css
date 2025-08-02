@@ -1,2 +1,233 @@
-<!-- Символ удачи в стиле фэн-шуй -->
-<div class="fengshui-symbol" aria-hidden="true">福</div>
+/* Гармоничный фэн-шуй стиль для страницы "О нас" */
+:root {
+  --primary: #E31837;  /* Красный - энергия жизни */
+  --gold: #D4AF37;     /* Золотой - богатство */
+  --cream: #FFF9F0;    /* Теплый кремовый */
+  --light: #FFFFFF;    /* Чистый белый */
+  --dark: #3A3A3A;     /* Глубокий серый для текста */
+  --shadow: 0 4px 24px rgba(227, 24, 55, 0.12);
+  --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Стили логотипа с красным текстом и золотой иконкой */
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary); /* Красный цвет текста */
+  display: flex;
+  align-items: center;
+}
+
+.logo-icon {
+  margin-right: 0.8rem;
+  color: var(--gold); /* Золотой цвет иконки */
+  font-size: 2rem;
+}
+
+/* Герой-секция */
+.about-hero {
+  background: linear-gradient(135deg, rgba(227, 24, 55, 0.85), rgba(212, 175, 55, 0.75)),
+              url('img/about-bg.jpg') center/cover;
+  height: 60vh;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  color: var(--light);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 4rem;
+}
+
+.about-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.about-hero h1 {
+  font-size: 3.2rem;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1.5rem;
+}
+
+.about-hero p {
+  font-size: 1.3rem;
+  opacity: 0.9;
+}
+
+/* Основной контент */
+.about-content {
+  padding: 4rem 0;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.about-text h2::after {
+  content: '';
+  position: absolute;
+  bottom: -0.8rem;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: var(--gold);
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: var(--gold);
+  font-weight: 500;
+  margin-bottom: 2rem;
+  display: block;
+}
+
+.about-text p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.signature {
+  margin-top: 2rem;
+  font-style: italic;
+  color: var(--dark);
+}
+
+.about-image {
+  position: relative;
+}
+
+.founder-photo {
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.founder-photo:hover {
+  transform: scale(1.02);
+}
+
+.experience-badge {
+  position: absolute;
+  bottom: -1rem;
+  right: -1rem;
+  background: var(--primary);
+  color: var(--light);
+  padding: 0.8rem 1.8rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(227, 24, 55, 0.3);
+}
+
+/* Призыв к действию */
+.contact-cta {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, var(--primary), #C0102F);
+  color: var(--light);
+  text-align: center;
+  position: relative;
+}
+
+.contact-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gold);
+}
+
+.cta-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-cta p {
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.9;
+}
+
+.contact-cta .btn {
+  background: var(--gold);
+  color: #5E4A1E;
+  padding: 1rem 3rem;
+  font-size: 1.1rem;
+  border-radius: 2rem;
+  transition: var(--transition);
+  display: inline-block;
+}
+
+.contact-cta .btn:hover {
+  background: #E6C229;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+  .about-hero h1 {
+    font-size: 2.8rem;
+  }
+  
+  .about-hero p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero {
+    height: 50vh;
+    min-height: 350px;
+  }
+  
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-image {
+    order: -1;
+    max-width: 80%;
+    margin: 0 auto 3rem;
+  }
+  
+  .about-hero h1 {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero {
+    height: 60vh;
+    min-height: 300px;
+  }
+  
+  .about-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .about-hero p {
+    font-size: 1.1rem;
+  }
+  
+  .contact-cta h2 {
+    font-size: 2rem;
+  }
+}
